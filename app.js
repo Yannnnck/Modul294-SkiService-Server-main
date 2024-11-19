@@ -31,7 +31,7 @@ document.getElementById("registrationForm").addEventListener("submit", function(
         pickup_date: calculatePickupDate(priority) // Berechnung des Abholdatums
     };
 
-    fetch("https://ski-service.netlify.app/api/registration", {
+    fetch("https://ski-service.netlify.app/server/data/registration.json", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
