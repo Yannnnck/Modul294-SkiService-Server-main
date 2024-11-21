@@ -66,18 +66,41 @@
                 <option value="express">Express</option>
             </select>
         </div>
-        <!-- Dropdown-Auswahl für Dienstleistungen -->
+        
+        <!-- Auswahl für Großer oder Kleiner Service -->
         <div class="form-group">
-            <label for="service">Dienstleistung</label>
-            <select class="form-control" id="service" required>
-                <option value="small">Kleiner Service</option>
-                <option value="large">Grosser Service</option>
-                <option value="race">Rennski-Service</option>
-                <option value="binding">Bindung montieren und einstellen</option>
-                <option value="skin">Fell zuschneiden</option>
-                <option value="wax">Heisswachsen</option>
-            </select>
+            <label>Service-Typ</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="serviceType" id="smallService" value="small" required>
+                <label class="form-check-label" for="smallService">Kleiner Service</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="serviceType" id="largeService" value="large" required>
+                <label class="form-check-label" for="largeService">Großer Service</label>
+            </div>
         </div>
+
+        <!-- Checkbox-Auswahl für zusätzliche Dienstleistungen -->
+        <div class="form-group">
+            <label>Zusätzliche Dienstleistungen</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="raceService" value="race">
+                <label class="form-check-label" for="raceService">Rennski-Service</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="bindingService" value="binding">
+                <label class="form-check-label" for="bindingService">Bindung montieren und einstellen</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="skinService" value="skin">
+                <label class="form-check-label" for="skinService">Fell zuschneiden</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="waxService" value="wax">
+                <label class="form-check-label" for="waxService">Heißwachsen</label>
+            </div>
+        </div>
+
         <!-- Absenden-Button -->
         <button type="submit" class="btn btn-primary">Anmelden</button>
     </form>
