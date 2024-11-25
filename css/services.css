@@ -25,4 +25,5 @@
 
 .service-img:hover {
     scale: 1.1;
+    box-shadow: 0 0 4px;
 }
