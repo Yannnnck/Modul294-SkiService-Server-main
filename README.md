@@ -1,74 +1,111 @@
-# Ski-Service Server (Backend & Frontend)
+# Ski-Service Projekt (Modul 294)
 
-Willkommen beim Ski-Service Server! Dieses Projekt ist eine Praxisarbeit und stellt sowohl das Backend als auch das Frontend für einen Ski-Service bereit.
+Willkommen zum **Ski-Service Projekt**, einem umfassenden System, das ein Backend mit RESTful-API und ein responsives Frontend für den Ski-Service bietet. Dieses Projekt wurde im Rahmen des **Modul 294** entwickelt und umfasst eine vollständige Implementierung mit modernen Webtechnologien.
+
+---
+
+## Inhaltsverzeichnis
+
+- [Ski-Service Projekt (Modul 294)](#ski-service-projekt-modul-294)
+  - [Inhaltsverzeichnis](#inhaltsverzeichnis)
+  - [Features](#features)
+    - [Backend (Server):](#backend-server)
+    - [Frontend:](#frontend)
+  - [Voraussetzungen](#voraussetzungen)
+  - [Installation und Setup](#installation-und-setup)
+    - [Backend-Setup](#backend-setup)
+    - [Frontend-Setup](#frontend-setup)
+  - [Projektstruktur](#projektstruktur)
+  - [API-Dokumentation](#api-dokumentation)
+    - [Wichtige API-Endpunkte](#wichtige-api-endpunkte)
+  - [Frontend-Inhalte](#frontend-inhalte)
+    - [Seitenübersicht:](#seitenübersicht)
+    - [Funktionen:](#funktionen)
+  - [Technologien](#technologien)
+    - [Backend:](#backend)
+    - [Frontend:](#frontend-1)
+  - [Autoren](#autoren)
+  - [Hinweise](#hinweise)
+
+---
+
+## Features
+
+### Backend (Server):
+
+- RESTful-API zur Verwaltung der Anmeldungen.
+- Swagger-Dokumentation der API unter `/api-docs`.
+- Datenvalidierung und Duplikatsprüfung bei Anmeldungen.
+- Option zum Löschen von Anmeldungen basierend auf Namen und E-Mail.
+- Dynamisches Berechnen von Terminen basierend auf Priorität und Öffnungszeiten.
+
+### Frontend:
+
+- Benutzerfreundliche HTML-Seiten für verschiedene Aktionen:
+  - Anmeldung für den Ski-Service.
+  - Anzeige der Angebote.
+  - Kontaktseite mit Google Maps Integration.
+  - Datenschutz und Impressum.
+- Responsive Design für alle Bildschirmgrößen.
+- Ladeanimation (Loader) beim Start.
+
+---
 
 ## Voraussetzungen
 
-Stellen Sie sicher, dass die folgenden Anforderungen erfüllt sind, bevor Sie mit der Installation beginnen:
+- **Node.js** (Version >= 14)
+- **npm** (Node Package Manager)
+- Webbrowser (z. B. Chrome, Firefox)
 
-- **Node.js** ist installiert
-- **npm** (Node Package Manager) ist verfügbar
+---
 
-## Setup
+## Installation und Setup
 
-### 1. Projekt initialisieren
+### Backend-Setup
 
-Initialisieren Sie das Projekt mit den folgenden Befehlen:
+1. **Projekt initialisieren**:
 
-```bash
-npm init --y
-```
+   ```bash
+   npm init --y
+   ```
 
-### 2. Notwendige Abhängigkeiten installieren
+2. **Notwendige Abhängigkeiten installieren**:
 
-Installieren Sie die benötigten Pakete:
+   ```bash
+   npm install --save express dotenv cors swagger-ui-express
+   ```
 
-- **Express** für den Webserver
-- **dotenv** zur Verwaltung von Umgebungsvariablen
-- **cors** zur Cross-Origin Resource Sharing-Unterstützung
+3. **Entwicklungsabhängigkeiten installieren**:
 
-```bash
-npm install --save express dotenv cors
-```
+   ```bash
+   npm install --save-dev nodemon
+   ```
 
-### 3. Entwicklungsabhängigkeiten installieren
+4. **Projekt starten**:
 
-Installieren Sie **Nodemon** für die automatische Serverneustarts während der Entwicklung:
+   - **Produktionsmodus**:
+     ```bash
+     npm start
+     ```
+   - **Entwicklungsmodus**:
+     ```bash
+     npm run dev
+     ```
 
-```bash
-npm install --save-dev nodemon
-```
+5. **Wichtig:**
 
-### 4. Swagger für API-Dokumentation
+   - Führen Sie das Projekt **nicht in einem OneDrive-Ordner** aus, da dies zu Problemen führen kann.
 
-Installieren Sie Swagger, um Ihre API-Dokumentation bereitzustellen:
+### Frontend-Setup
 
-```bash
-npm install swagger-ui-express -S
-```
+1. Kopieren Sie die HTML-, CSS- und JavaScript-Dateien in einen Ordner, der vom Webserver bereitgestellt wird.
+2. Stellen Sie sicher, dass die Links zu CSS und JavaScript-Dateien korrekt sind.
+3. Öffnen Sie die `index.html` in einem Webbrowser.
 
-## Start des Servers
 
-### 1. Produktionsstart
-
-Um den Server zu starten, verwenden Sie:
-
-```bash
-npm start
-```
-
-### 2. Entwicklungsstart
-
-Starten Sie den Server im Entwicklungsmodus (mit automatischen Neustarts):
-
-```bash
-npm run dev
-```
-
-## Struktur des Projekts
+## Projektstruktur
 
 Hier ist eine Übersicht über die Projektstruktur:
-
 ```
 Modul294-SkiService-Server/
 ├── css/               # CSS-Dateien für das Frontend
@@ -86,25 +123,81 @@ Modul294-SkiService-Server/
 └── swagger.json       # Swagger-Dokumentation für die API
 ```
 
-## Zugriff auf die API-Dokumentation
+---
 
-Swagger wird verwendet, um die API-Dokumentation bereitzustellen. Nach dem Start des Servers können Sie die Dokumentation unter folgender URL aufrufen:
+## API-Dokumentation
+
+Nach dem Start des Servers können Sie die API-Dokumentation unter folgendem Link aufrufen:
 
 ```
 http://localhost:5000/api-docs
 ```
 
-## Hinweis
+### Wichtige API-Endpunkte
 
-**Wichtig:** Führen Sie dieses Projekt **nicht** in einem OneDrive-Ordner aus, da dies zu Problemen führen kann.
+- **GET** `/api/registrations` - Alle Anmeldungen abrufen
+- **POST** `/api/registration` - Neue Anmeldung hinzufügen
+- **DELETE** `/api/registration/:id` - Anmeldung löschen
 
-## Frontend-Zugriff
+---
 
-Das Frontend für den Ski-Service ist in diesem Projekt integriert. Nach dem Start des Servers können Sie das Frontend über folgende URL aufrufen:
+## Frontend-Inhalte
 
-```
-http://localhost:5000
-```
-Starte es über den Live Server um die Webseite zu benutzen.
+### Seitenübersicht:
 
-## Happy Coding 😊
+1. **Home (`index.html`)**:
+   - Begrüßungsseite mit Bannern und Informationen zum Service.
+2. **Angebot (`services.html`)**:
+   - Detaillierte Beschreibung der angebotenen Dienstleistungen.
+3. **Kontakt (`contact.html`)**:
+   - Kontaktinformationen und Google Maps Integration.
+4. **Anmeldung (`registration.html`)**:
+   - Formular zur Registrierung für den Ski-Service.
+5. **Datenschutz (`datenschutz.html`)** und **Impressum (`impressum.html`)**:
+   - Rechtliche Informationen.
+
+### Funktionen:
+
+- Formularüberprüfung (z. B. E-Mail-Format und Duplikatprüfung).
+- Dynamische Buttons:
+  - Anmeldung absenden.
+  - Bestehende Anmeldungen ansehen.
+  - Anmeldung löschen (nach Bestätigung).
+- Responsives Layout mit Bootstrap und CSS Media Queries.
+
+---
+
+## Technologien
+
+### Backend:
+
+- **Node.js** und **Express** für den Server.
+- **dotenv** zur Verwaltung von Umgebungsvariablen.
+- **cors** für Cross-Origin Resource Sharing.
+- **Swagger** zur API-Dokumentation.
+
+### Frontend:
+
+- **HTML**, **CSS**, **Bootstrap** für Design und Layout.
+- **JavaScript** für Interaktivität.
+- **Google Maps API** für Standortanzeige.
+
+---
+
+## Autoren
+
+- **Projektleitung:** Yannick Frei
+- **Entwicklung:** Yannick Frei, Tunahan Keser, Felipe Oliveira de Carvalho
+
+---
+
+## Hinweise
+
+- Testen Sie das Projekt in einer lokalen Umgebung mit Node.js und einem modernen Browser.
+- Stellen Sie sicher, dass alle Verbindungen korrekt eingerichtet sind, insbesondere bei API-Calls.
+
+---
+
+
+**Ski-Service Projekt** 😊
+

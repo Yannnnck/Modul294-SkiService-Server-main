@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt - Ski-Service</title>
+    <!-- Bootstrap CSS für grundlegendes Styling -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Projekt-spezifische CSS-Dateien -->
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/impressum.css">
 </head>
 <body>
 
-<!-- Loader-Element -->
+<!-- Vollbild-Loader wird angezeigt, bis die Seite vollständig geladen ist -->
 <div class="loader"></div>
 
-<!-- Einbindung des JavaScript-Skripts zum Steuern des Loaders -->
+<!-- Loader-JavaScript -->
 <script src="/js/loader.js"></script>
 
+<!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="index.html">Jetstream-Ski-Service</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
@@ -24,6 +27,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
+            <!-- Navigationselemente -->
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Angebot</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
@@ -32,11 +36,14 @@
     </div>
 </nav>
 
+<!-- Hauptinhalt -->
 <main class="container my-5">
     <section class="p-4 rounded shadow background">
+        <!-- Titel für das Impressum -->
         <h2 class="text-center text-primary">Impressum</h2>
         <hr class="mb-4">
         <div class="row">
+            <!-- Linke Spalte: Kontaktinformationen -->
             <div class="col-md-6">
                 <h5>Kontaktinformationen</h5>
                 <p>
@@ -50,6 +57,7 @@
                     <b>E-Mail:</b> <a href="mailto:info@Jetstream-service.ch" class="text-primary">info@Jetstream-service.ch</a>
                 </p>
             </div>
+            <!-- Rechte Spalte: Haftungsausschluss -->
             <div class="col-md-6">
                 <h5>Haftungsausschluss</h5>
                 <p>
@@ -61,8 +69,10 @@
     </section>
 </main>
 
+<!-- Footer -->
 <footer class="bg-primary text-white text-center py-4 mt-auto">
     <div class="container">
+        <!-- Fußzeilen-Links -->
         <p>&copy; 2024 Ski-Service. Alle Rechte vorbehalten.</p>
         <ul class="list-unstyled mb-0">
             <li><a href="datenschutz.html" class="text-white">Datenschutz</a></li>
@@ -71,6 +81,7 @@
     </div>
 </footer>
 
+<!-- Externe JavaScript-Bibliotheken -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
