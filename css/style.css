@@ -39,3 +39,30 @@
         transform: rotate(1turn); /* Dreht sich vollständig um 360 Grad */
     }
 }
+
+body {
+    background: url('https://images.snowleader.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,w=1630,h=1000/https://images.snowleader.com/media/catalog/category/categorie_ski_desktop_1_8.jpg'); /* Pfad zum Hintergrundbild */
+    background-size: cover; /* Bild füllt den gesamten Bereich */
+    background-position: center; /* Bild wird zentriert */
+    background-repeat: no-repeat; /* Kein Wiederholen des Bildes */
+    background-attachment: fixed; /* Bild bleibt beim Scrollen fixiert */
+    margin: 0; /* Entfernt Standardabstand */
+
+    /* Setzt die Höhe auf 100vh und Flexbox für Layout */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.background {
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 2px solid rgba(108, 108, 108, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 3px;
+    min-height: 200px;
+    max-width: 1260px;
+    height: auto;
+    margin: 20px auto 0;
+    width: 90%;
+}

@@ -1,5 +1,38 @@
 .offer-image {
+    border: 2px solid rgba(108, 108, 108, 0.1);
+    object-fit: cover;
     width: 150px;
     height: 150px;
-    object-fit: cover;
+}
+
+.banner {
+    background: none;
+    background: url('https://www.skisolutions.com/app/uploads/2023/08/ski-hotels-1.jpg');
+    background-size: cover; /* Bild füllt den gesamten Bereich */
+    background-position: center; /* Bild wird zentriert */
+    background-repeat: no-repeat; /* Kein Wiederholen des Bildes */
+    margin: 0; /* Entfernt Standardabstand */
+
+    /* Setzt die Höhe auf 100vh und Flexbox für Layout */
+    max-width: 100%;
+    max-width: auto;;
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    background-color: rgba(0, 0, 0, 0.4); /* Halbtransparenter schwarzer Hintergrund */
+    color: #ffffff; /* Weiße Schriftfarbe */
+    padding: 10px 30px; /* Polsterung für bessere Lesbarkeit */
+    border-radius: 10px; /* Abgerundete Ecken */
+    font-family: Arial, sans-serif; /* Klare und gut lesbare Schriftart */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Schatten für besseren Kontrast */
+}
+
+.banner img:hover {
+    scale: 1.0;
+}
+
+.offer-image:hover {
+    scale: 1.2;
 }
