@@ -61,8 +61,10 @@ body {
     padding: 20px;
     box-shadow: 0 0 3px;
     min-height: 200px;
+    min-width: 420px;
     max-width: 1260px;
     height: auto;
     margin: 20px auto 0;
+    margin-bottom: 20px;
     width: 90%;
 }
